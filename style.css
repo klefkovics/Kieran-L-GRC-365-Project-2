@@ -1,15 +1,603 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
   color: #222;
   line-height: 1.4;
-  font-size: 16pt;
+  font-size: 11pt;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 100;
+}
+
+/* Nav Bar */
+
+header {
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  position: fixed;
+  Top: 0px;
+  background-color: white;
+  z-index: 1;
+}
+
+nav {
+  height: auto;
+  width: 85vw;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Helvetica, sans-serif;
+  font-size: 12pt;
+}
+
+.navlinks {
+  width: 40rem;
+  height: 100%;
+  display: flex;
+  flex-shrink: 1;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.button {
+  color: white;
+  padding: 0.7rem 0.7rem;
+  background-color: #0061AF;
+  text-align: center;
+  border: none;
+  display: block;
+  cursor: pointer;
+  font-family: Helvetica, sans-serif;
+  font-size: 12pt;
+}
+
+.button:hover {
+  background-color: #003866;
+}
+
+/* Links */
+
+a:link {
+  color: #0061AF;
+  text-decoration: none;
 }
 
 
+footer a:link {
+  color: white;
+}
 
+nav a:link {
+  color: #222;
+}
 
+.related a:link {
+  color: #222;
+}
 
+a:visited {
+  color: #D2232A;
+}
+
+footer a:visited {
+  color: white;
+}
+
+nav a:visited {
+  color:#222;
+}
+
+.related a:visited {
+  color: #222;
+}
+
+a:hover {
+  color: #0061AF;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+nav a:hover {
+  color: #0061AF;
+}
+
+.related a:hover {
+  color: #0061AF;
+}
+a:active {
+  color: #0061AF;
+}
+
+/* Article */
+
+main {
+  width: 75vw;
+  margin: 5rem auto 2rem auto;
+}
+
+article {
+  width: max(69%, 400px);
+  border-bottom: 1px solid #444;
+}
+
+article .byline {
+  border-bottom: 1px solid #444;
+  padding-bottom: 2rem;
+}
+
+.article {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: auto;
+  padding-bottom: 2rem;
+}
+
+.hero {
+  width: 100%;
+  height: 100vmin;
+  border: 2rem solid #222;
+  overflow: hidden;
+}
+
+.hero img {
+  height: 100%;
+  width: auto;
+  float: right;
+}
+
+.title {
+  position: absolute;
+  z-index: 0;
+  Top: 8rem;
+  left: 7rem;
+}
+
+.title h1 {
+  font-size: 8vmax;
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: none;
+  font-weight: 700;
+  background-color: white;
+  padding: 0 2rem;
+  margin: 0;
+  letter-spacing: -0.5rem;
+}
+
+.title p {
+  margin-left: 10vw;
+  margin-top: 1rem;
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: none;
+}
+
+.title .articletype {
+  background-color: #222;
+  color: white;
+  padding: 0.5em;
+  width: 30%;
+  font-size: 16pt;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+.title .carmodel {
+  background-color: white;
+  color: #222;
+  padding: 0.5em;
+  width: 30%;
+  font-size: 12pt;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+.subtitle {
+  font-family: "Libre Baskerville", serif;
+  font-optical-sizing: none;
+  font-size: 24pt;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0rem;
+  font-weight: 600;
+  margin: 1rem 0 2rem 0;
+}
+
+.byline {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.byline img {
+  border-radius: 50%;
+  width: 60px;
+  height: auto;
+}
+
+.byline p {
+  margin-bottom: 0;
+}
+
+.first:first-letter {
+  font-size: 7rem;
+  float: left;
+  line-height: 0.65;
+  margin: 0.3rem 0.5rem 0 0;
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: none;
+  background-color: #0061AF;
+  color: white;
+  padding: 0.5rem;
+}
+
+article p {
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+article img {
+  width: 100%;
+  height: auto;
+}
+
+figcaption, .caption {
+  font-size: 9pt;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.textwrap figure {
+  width: 50%;
+  height: auto;
+  float: right;
+  margin-left: 1rem;
+}
+
+th, td {
+  width: 33%;
+  text-align: left;
+  padding: 0.1rem 0.5rem;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.comparison {
+  border: 0.5rem solid #222;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 1800px) {
+  .comparison {
+  margin-top: calc(30vw - 30rem);  
+  }
+}
+
+.comparison h2 {
+  font-size: 24pt;
+}
+
+table tr:nth-child(odd) {
+  background-color: #EBEBEB;
+}
+
+thead tr:first-child {
+  background-color: white;
+  padding: 0;
+}
+
+/* Sidebar */
+
+.sidebarcontainer {
+  width: 75vw;
+  height: auto;
+  position: sticky;
+  top: 4.7rem;
+  bottom: 15rem;
+  display: flex;
+  justify-content: flex-end;
+  
+}
+
+.sidebarcontainer2 {
+  width: 0px;
+  position: static;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: max(27%, 230px);
+  height: auto;
+  padding: 2rem 2rem 1rem 2rem;
+  background-color: #EBEBEB;
+  font-family: Helvetica, sans-serif;
+  font-size: 9pt;
+  margin-top: 2rem;
+}
+
+.sidebar h2 {
+  font-size: 16pt;
+  font-weight: 800;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+.related {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 1rem 0;
+  height: auto;
+}
+
+.relatedtext {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.related img {
+  width: auto;
+  height: min(5vw, 70px);
+  display: block;
+}
+
+.viewall {
+  margin: 1rem ;
+  align-self: center;
+  justify-self: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  
+  article {
+    order: 1;
+  }
+  
+  .article {
+    flex-direction: column;
+  }
+  
+  .sidebarcontainer2 {
+    order: 2;
+    position: static;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .sidebarcontainer {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+  
+  .sidebar {  
+    display: grid;
+    grid-template: auto 1fr 1fr / repeat(auto-fit, minmax(200px, 1fr));
+    width: 100%;
+    height: auto;
+    column-gap: 1rem;
+    margin: 0;
+  }
+  
+  .sidebar h2 {
+    grid-column: 1 / -1;
+    align-self: flex-end;
+  }
+  
+  .related img {
+    height: max(7vw, 80px);
+  }
+  
+  .viewall {
+    align-self: center;
+    justify-self: center;
+    width: max(50%, 80px);
+    height: min(60%, 60px);
+  }
+  
+  .viewall .button {
+    float: right;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+  }
+}
+
+/* Footer */
+
+.footercontent {
+  width: 75%;
+  height: 17rem;
+  display: grid;
+  grid-template: minmax(50px, 3fr) 1fr 1fr 1fr 2fr / repeat(3, 1fr);
+  color: white;
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+.footercontent img {
+  grid-column: 1 / 4;
+  background-color: white;
+  padding: 1rem;
+}
+
+footer {
+  font-family: Helvetica, sans-serif;
+  font-size: 12pt;
+  width: 100%;
+  height: auto;
+  background-color: #0061AF;
+  padding: 4rem 0;
+}
+
+.legal {
+  grid-column: 1 / 4;
+  text-align: center;
+  align-content: end;
+  order: 2;
+}
+
+/* Mobile Site */
+
+@media only screen and (max-width: 480px) {
+  
+  html {
+    font-size: 14pt;
+  }
+  
+  /* Nav Bar */
+  
+  nav {
+    padding: 1rem 1rem;
+    width: 100%;
+    height: auto;
+    font-size: 9pt;
+    flex-direction: column;
+    margin: 0;
+  }
+  
+  .navlinks {
+  width: 100%;
+  padding-top: 1rem;
+  font-size: 11pt;
+  }
+  
+  
+  .logo {
+    width: 25vw;
+  }
+  
+  /* Article */
+  
+  main {
+    width: 100vw;
+    margin: 7rem 0 2rem 0;
+    padding: 0 1rem;
+  }
+  
+  article {
+    width: 100%;
+  }
+  
+  .hero {
+    border: 1rem solid #222;
+    height: 67vmax;
+  }
+  
+  .title {
+    left: 0;
+    top: 9rem;
+    width: 100%
+  }
+  
+  .title h1 {
+    font-size: 5vmax;
+    letter-spacing: 0;
+  }
+  
+  .title .articletype {
+    width: 66%;
+    margin: 1rem 0;
+    font-size: 12pt;
+  }
+  
+  .title .carmodel {
+   width: 66%;
+   margin: 1rem 0;
+   font-size: 12pt;
+  }
+  
+  .subtitle {
+    letter-spacing: -0.05rem;
+    font-size: 19pt;
+    line-height: 1.3;
+  }
+  
+  .textwrap figure {
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .comparison h2, .sidebar h2 {
+    font-size: 22pt;
+  }
+  
+  .table {
+    width: 100%;
+    overflow-x: scroll; 
+  }
+  
+  table {
+    width: 100vw;
+  }
+  
+  .caption {
+    font-size: 12pt
+  }
+  
+  th, td {
+    padding: 0.4rem 0.5rem
+  }
+  
+  /* Sidebar */
+  
+  .sidebar {
+    margin-top: 2rem;
+  }
+  
+  .related {
+    font-size: 12pt;
+  }
+  
+  /* Footer */
+  
+  footer {
+    width: 100%;
+    height: auto;
+    padding: 2rem 2rem;
+  }
+  
+  .footercontent {
+    width: 100%;
+    grid-template: minmax(60px, 2fr) 1fr 1fr 1fr minmax(50px, 2fr) / repeat(3, 1fr);
+  }
+  
+  .footercontent img {
+    width: 50%;
+  }
+
+}
